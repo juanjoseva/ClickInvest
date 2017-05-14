@@ -622,6 +622,10 @@ a{
     left:48%;
 }
 
+.centrado{
+    text-align: center;
+}
+
 .text-center .longer-underline::after{
     width:8%;
     left:46%
@@ -1113,7 +1117,7 @@ section.parallax-bg{
 }
 
 .primary-bg{
-    background:#4aa3df;
+    background:#1F629D;
     color:#f9f9f9;
 }
 
@@ -1268,6 +1272,7 @@ ul.highlights .icon{
 
 .se-steps h4{
     position:relative;
+    text-align: center;
     z-index:0;
 }
 
@@ -1275,8 +1280,10 @@ ul.highlights .icon{
     content:counter(se-counter);
     counter-increment:se-counter;
     position:absolute;
-    color:#f4f4f4;
+    color: #cfcfcf;
+    /*color:#f4f4f4;*/
     font-size:4.236em;
+    margin-left: 0.5em;
     font-style:italic;
     z-index:-1;
 }
@@ -1497,4 +1504,60 @@ footer .footer-bottom h6{
 
 .entry-title a:hover{
     color:#4aa3df!important
+}
+
+.modal-dialog {
+    /*position: fixed;*/
+    width: 1200px;
+    max-width: 100%;
+    /*top: 50%;*/
+    /*left: 50%;*/
+    transform: translate(-50%, -50%);
+}
+
+
+/*Se pone el indicador de play encima de la imagen*/
+
+
+.img {
+    position: relative;
+}
+
+.img i {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    /*background: #fff;*/
+    border: 1px solid #ccc;
+    padding: 1px;
+    border-radius: 2px;
+    display: inline-block;
+    height: 400px;
+    margin: 1rem;
+    position: relative;
+    width: 300px;
+    text-align: center;
+    background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#abbaab), to(#f3f3f3), color-stop(.1,#fff));
+}
+
+.card-5 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.alineacionVertical{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+@media screen and (max-device-width: 1024px){
+    .alineacionVertical{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
