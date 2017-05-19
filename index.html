@@ -211,7 +211,6 @@
             <div class="container">
                 <div class="row text-center">
                     <h3>Create Your Account Now!</h3>
-                    <!--<p>Get 30 days trial. No credit card required.</p>-->
                     <a href="https://rreinvestmentopportunity.secure.force.com/apex/clickinvest3" target="_blank" class="btn se-btn-black btn-rounded">SIGN UP</a>
                 </div> <!-- end row -->
             </div> <!-- end container -->
@@ -273,7 +272,7 @@
             </div><br />
             <div class="container">
                 <div class="row">
-                    <form class="col-md-9 col-sm-6" action="send-email-mailgun.php" method="post" id="form">
+                    <form class="col-md-9 col-sm-6" id="contact-form" method="post" action="php/mail.php">
                         <div class="form-group col-md-6">
                             <label for="firstname">First Name</label>
                             <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name.." required="">
@@ -284,7 +283,7 @@
                         </div> <!-- end form-group -->
                         <div class="form-group col-md-6">
                             <label for="company">Company Name</label>
-                            <input type="email" class="form-control" id="company" name="email" placeholder="Company Name">
+                            <input type="text" class="form-control" id="company" name="company" placeholder="Company Name">
                         </div> <!-- end form-group -->
                         <div class="form-group col-md-6">
                             <label for="email">Email Address</label>
@@ -296,14 +295,14 @@
                         </div> <!-- end form-group -->
                         <div class="form-group col-md-6">
                             <label for="interested">Interested In</label>
-                            <select class="selectpicker form-control" multiple id="interested">
+                            <select class="selectpicker form-control" multiple id="interested" name="interested">
                                 <option value="Default">Select</option>
-                                <option value="SingleFamily">Single Family Flips</option>
-                                <option value="SingleRentals">Single Family Rentals</option>
-                                <option value="CondoFlips">Condo or Townhome Flips</option>
-                                <option value="CondoRentals">Condo or Townhome Rentals</option>
-                                <option value="MultiFlips">Multi Unit Flips</option>
-                                <option value="MultiRentals">Multi Unit Rentals</option>
+                                <option value="Single Family Flips">Single Family Flips</option>
+                                <option value="Single Family Rentals">Single Family Rentals</option>
+                                <option value="Condo or Townhome Flips">Condo or Townhome Flips</option>
+                                <option value="Condo or Townhome Rentals">Condo or Townhome Rentals</option>
+                                <option value="Multi Unit Flips">Multi Unit Flips</option>
+                                <option value="MultiUnit Rentals">Multi Unit Rentals</option>
                             </select>
 
                         </div> <!-- end form-group -->
@@ -312,9 +311,7 @@
                             <textarea name="message" id="message" rows="6" placeholder="Enter your message here.."></textarea>
                         </div> <!-- end form-group -->
 
-                        <div class="form-group col-md-12">
-                            <div class="g-recaptcha" data-sitekey="6LdrSCQTAAAAAFvP5P_RHmBQreGEHEiAIR3rc8FW"></div>
-                        </div>
+
 
                         <div class="text-center col-md-12 mt10 mb20">
                             <button type="submit" class="btn se-btn btn-rounded">Submit</button>
@@ -392,9 +389,6 @@
 
         <!-- (Optional) Latest compiled and minified JavaScript translation files -->
         <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/i18n/defaults-*.min.js"></script>-->
-
-        <!--Video -->
-
 
 
 
