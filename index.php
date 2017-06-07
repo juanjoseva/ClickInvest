@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -26,7 +27,7 @@
         <link rel="stylesheet" href="styles/vendor.css">
         <link rel="stylesheet" href="styles/main.css">
 
-
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
         <!-- ========== MODERNIZR ========== -->
     	<script src="scripts/vendor/modernizr.js"></script>
@@ -36,6 +37,7 @@
 
         <!-- If you'd like to support IE8 -->
         <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
 
 
     </head>
@@ -269,10 +271,11 @@
         <section class="se-section" id="contactUs">
             <div class="row text-center">
                 <h3>Request Demo!</h3>
+                <div id="mensaje"></div>
             </div><br />
             <div class="container">
                 <div class="row">
-                    <form class="col-md-9 col-sm-6" id="contact-form" method="post" action="php/mail.php">
+                    <form class="col-md-9 col-sm-6" id="form" method="post" action="php/phpMailer.php">
                         <div class="form-group col-md-6">
                             <label for="firstname">First Name</label>
                             <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name.." required="">
@@ -311,7 +314,10 @@
                             <textarea name="message" id="message" rows="6" placeholder="Enter your message here.."></textarea>
                         </div> <!-- end form-group -->
 
-
+                        <!--Captcha-->
+                        <div class="form-group col-md-12">
+                            <div class="g-recaptcha" data-sitekey="6LfysiIUAAAAACfpuWoXUMN4SrCLD6EkWwi5WPrA"></div>
+                        </div>
 
                         <div class="text-center col-md-12 mt10 mb20">
                             <button type="submit" class="btn se-btn btn-rounded">Submit</button>
@@ -361,18 +367,38 @@
         </footer>
 
 
-        <div class="modal fade" id="click2">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <img src="images/click2.gif" class="img-responsive">
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!--<div class="modal fade" id="click2">-->
+            <!--<div class="modal-dialog">-->
+                <!--<div class="modal-content">-->
+                    <!--<div class="modal-body">-->
+                        <!--<img src="images/click2.gif" class="img-responsive">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
 
 
     	<script src="scripts/vendor.js"></script>
+
+
+        <script src="scripts/vendor/jquery.form.js"></script>
+
+        <script src="scripts/vendor/sweetalert2.js"></script>
+
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var options = {
+                    success: function () {
+                        $("#form").clearForm();
+                        var node = document.getElementById("mensaje");
+                        node.innerHTML = "<p class='alert alert-success'>" + "Thank you for your interest in Clickinvest. A team member will be in contact with you shortly." + "</p>";
+                        $("#mensaje").fadeOut(10000);
+                    }
+                };
+                $("#form").ajaxForm(options);
+            });
+        </script>
 
         <!-- ========== MINIFIED PLUGINS JS ========== -->
     	<script src="scripts/plugins.js"></script>

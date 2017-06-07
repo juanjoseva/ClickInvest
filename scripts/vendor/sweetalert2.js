@@ -123,7 +123,8 @@
     }
   };
 
-  var getTopMargin = function(elem) {
+
+   var getTopMargin = function(elem) {
     elem.style.left = '-9999px';
     elem.style.display = 'block';
 
@@ -134,6 +135,8 @@
     elem.style.display = 'none';
     return ('-' + parseInt(height / 2 + padding, 10) + 'px');
   };
+
+
 
   var fadeIn = function(elem, interval) {
     if (+elem.style.opacity < 1) {
