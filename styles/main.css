@@ -1561,3 +1561,32 @@ footer .footer-bottom h6{
         margin-right: auto;
     }
 }
+
+@media screen and (min-width: 800px){
+
+.video {
+    border: 1px solid black;
+}
+
+.wrapper{
+    display:table;
+    width:auto;
+    position:relative;
+    width:70%;
+}
+.playpause {
+    background-image:url(../images/media_play_pause_resume.png);
+    background-repeat:no-repeat;
+    width:10%;
+    height:10%;
+    position:absolute;
+    left:0%;
+    right:0%;
+    top:0%;
+    bottom:0%;
+    margin:auto;
+    background-size:contain;
+    background-position: center;
+}
+
+}

@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
         <!-- ========== PAGE TITLE ========== -->
-        <title>Click Invest Real Estate</title>
+        <title>ClickInvest Real Estate</title>
 
         <!-- ========== META TAGS ========== -->
         <meta name="description" content="Flip, Flipcomp, Rehab, Fortune Builders, Zillow, Redfin, Realtor.com, flip that house,
@@ -20,8 +20,23 @@
         <meta name="author" content="Juan Jose Vazquez">
 
         <!-- ========== FAVICON & APPLE ICONS ========== -->
-        <link rel="shortcut icon" href="images/favicon.png">
-        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="images/ico/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/ico/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/ico/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/ico/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/ico/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/ico/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/ico/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/ico/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/ico/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/ico/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/ico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/ico/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/ico/favicon-16x16.png">
+        <link rel="manifest" href="images/ico/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/ico/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
 
         <!-- ========== MINIFIED VENDOR CSS ========== -->
         <link rel="stylesheet" href="styles/vendor.css">
@@ -37,8 +52,6 @@
 
         <!-- If you'd like to support IE8 -->
         <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
-
-
 
     </head>
 
@@ -83,7 +96,7 @@
                             </a>
                         </li>
     					<li>
-    						<a href="login.html" target="_blank" class="" >Login </a>
+    						<a href="https://rreinvestmentopportunity.secure.force.com/apex/login" target="_blank" class="" >Login </a>
     					</li>
     					<li class="nav-btn-wrap">
                             <span class="nav-btn">
@@ -184,18 +197,19 @@
         <section class="se-section single-feature" id="video">
 
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <video id="my-video" class="video-js center-block" controls controlsList="nodownload" preload="auto" width="100%" height="100%" data-setup="{}">
-                            <source src="video/video.mp4" type='video/mp4'>
+            <div class="container wrapper">
+                <div class="row" >
+                    <div class="col-md-12" >
+                        <video id="my-video" class="video center-block" controls controlsList="nodownload" preload="auto" width="80%" height="80%" data-setup="{}" poster="video/video.jpg" >
+<!--                        <video class="video center-block">-->
+                            <source src="video/video3.mp4" type='video/mp4' >
                             <!--<source src="MY_VIDEO.webm" type='video/webm'>-->
                             <p class="vjs-no-js">
                                 To view this video please enable JavaScript, and consider upgrading to a web browser that
                                 <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
                             </p>
                         </video>
-
+                        <div class="playpause"></div>
 
                         <!--<div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/23wxWTFdl3s?modestbranding=1&showinfo=0"></iframe>
@@ -337,7 +351,7 @@
                         </p>
                         <h6 class="underline mtn">Email Address</h6>
                         <p>
-                            info@clickinvestre.com<br>
+                            info@clickinvest.com<br>
                         </p>
                     </div> <!-- end contact-info -->
                 </div> <!-- end row -->
@@ -415,6 +429,18 @@
 
         <!-- (Optional) Latest compiled and minified JavaScript translation files -->
         <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/i18n/defaults-*.min.js"></script>-->
+
+        <script>
+            $('.video').parent().click(function () {
+                if($(this).children(".video").get(0).paused){
+                    $(this).children(".video").get(0).play();
+                    $(this).children(".playpause").fadeOut();
+                }else{
+                    $(this).children(".video").get(0).pause();
+                    $(this).children(".playpause").fadeIn();
+                }
+            });
+        </script>
 
 
 
