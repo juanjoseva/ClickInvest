@@ -10,13 +10,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
         <!-- ========== PAGE TITLE ========== -->
-        <title>ClickInvest Real Estate</title>
+        <title>ClickInvest - Chicago Real Estate Investment and Flipping</title>
 
         <!-- ========== META TAGS ========== -->
-        <meta name="description" content="Flip, Flipcomp, Rehab, Fortune Builders, Zillow, Redfin, Realtor.com, flip that house,
-        hgtv, rental, investment, real estate investor, wholesale, off market, sheriff sale, acquisition platform, real estate systems">
-        <meta name="keywords" content="Flip, Flipcomp, Rehab, Fortune Builders, Zillow, Redfin, Realtor.com, flip that house,
-        hgtv, rental, investment, real estate investor, wholesale, off market, sheriff sale, acquisition platform, real estate systems">
+        <meta name="description" content="Clickinvest is a real estate platform that presents its subscribers with the best real estate investment and flipping opportunities in the Chicago metropolitan area. Visit now!">
+        <meta name="keywords" content="Flip, Flipcomp, Rehab, Fortune Builders, Zillow, Redfin, Realtor.com, flip that house, hgtv, rental, investment, real estate investor, wholesale, off market, sheriff sale, acquisition platform, real estate systems">
         <meta name="author" content="Juan Jose Vazquez">
 
         <!-- ========== FAVICON & APPLE ICONS ========== -->
@@ -60,6 +58,7 @@
     .dark-header: for dark colored header
     ==========  ========== -->
     <body class="light-header animsition" id="home">
+    <?php include_once("analyticstracking.php") ?>
 
         <!-- ========== NAVIGATION ========== -->
     	<nav class="navbar yamm navbar-fixed-top" role="navigation">
@@ -86,7 +85,7 @@
                             </a>
     					</li>
                         <li>
-                            <a href="#theSystem" data-toggle="collapse" data-target=".navbar-collapse.in">
+                            <a href="#video2" data-toggle="collapse" data-target=".navbar-collapse.in">
                                 Our Users
                             </a>
                         </li>
@@ -203,11 +202,14 @@
 
 
             <div class="container wrapper">
+                <div class="row text-center">
+                    <h3 class="underline mtn">See ClickInvest in Action</h3>
+                </div>
                 <div class="row" >
                     <div class="col-md-12" >
-                        <video id="my-video" class="video center-block" controls controlsList="nodownload" preload="auto" width="80%" height="80%" data-setup="{}" poster="video/video.jpg" >
+                        <video id="my-video" class="video center-block" controls controlsList="nodownload" preload="auto" width="80%" height="80%" data-setup="{}" poster="video/video2.jpg" >
 <!--                        <video class="video center-block">-->
-                            <source src="video/video3.mp4" type='video/mp4' >
+                            <source src="video/videoPromo.mp4" type='video/mp4' >
                             <!--<source src="MY_VIDEO.webm" type='video/webm'>-->
                             <p class="vjs-no-js">
                                 To view this video please enable JavaScript, and consider upgrading to a web browser that
@@ -236,6 +238,41 @@
                 </div> <!-- end row -->
             </div> <!-- end container -->
         </section>
+
+
+        <!-- ========== Our Users ========== -->
+        <section class="se-section single-feature" id="video2">
+
+
+            <div class="container wrapper">
+                <div class="row text-center">
+                    <h3 class="underline mtn">What our Users are saying</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" >
+                        <video id="my-video2" class="video center-block" controls controlsList="nodownload" preload="auto" width="80%" height="80%" data-setup="{}" poster="video/video.jpg" >
+                            <!--                        <video class="video center-block">-->
+                            <source src="video/video3.mp4" type='video/mp4' >
+                            <!--<source src="MY_VIDEO.webm" type='video/webm'>-->
+                            <p class="vjs-no-js">
+                                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                            </p>
+                        </video>
+                        <div class="playpause"></div>
+
+                        <!--<div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/23wxWTFdl3s?modestbranding=1&showinfo=0"></iframe>
+                        </div>-->
+                    </div>
+                </div>
+
+            </div> <!-- end container -->
+
+        </section>
+
+
+
 
         <!-- ========== OUR FOUNDERS ========== -->
         <section class="se-section features-section parallax-bg" data-parallax="scroll" data-image-src="images/bg-img-3.jpg" data-speed="0.4" id="founders">
@@ -378,8 +415,8 @@
                     </div>
 
                     <div class="col-md-6 text-right">
-                        <h6><a href="#">FACEBOOK</a></h6>
-                        <h6><a href="#">LINKEDIN</a></h6>
+                        <h6><a href="https://www.facebook.com/clickandinvest/">FACEBOOK</a></h6>
+                        <h6><a href="https://www.linkedin.com/company-beta/22296272/">LINKEDIN</a></h6>
                     </div>
                 </div> <!-- end footer-bottom -->
             </div> <!-- end container -->
